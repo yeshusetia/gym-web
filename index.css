@@ -1,0 +1,128 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: url('gym.jpg');
+    background-size: auto;
+    color: white;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.header{
+    display: flex;
+
+}
+.left{
+    /* border: 2px solid red; */
+    color: white;
+    position: absolute;
+    left:38px;
+    top:20px;
+}
+.mid{
+    /* border: 2px solid yellow; */
+    color: white;
+    margin:20px auto;
+    width: 50%;
+  
+}
+.right{
+    /* border: 2px solid blue; */
+    color: white;
+    position: absolute;
+    right: 38px;
+    top:20px;
+}
+.navbar{
+   display: flex;
+   justify-content: center;
+  
+}
+.navbar li{
+   list-style: none; /* list style is to remove bullets from list*/
+ font-size: 26px;
+ font-weight: bolder
+ ;
+}
+.navbar li a{
+   text-decoration: none;   /*this is to remove underlines from the hyper links*/
+color: white;
+padding: 34px 23px;
+}
+.navbar li a:hover{ /* hover is used for when mouse is hover on something*/
+text-decoration: underline;
+color: grey;
+}
+.left img{ /* means the css on the image tag inside the left class*/
+   filter:invert(100%);
+   padding: 0 10px;
+   width: 60px;
+}
+.name{
+   text-align: center;
+   font-family: 'Baloo Bhai 2', cursive;
+   font-weight: bold;
+}
+.btn{
+   margin:0px 9px;
+   color: white;
+   background-color: black;
+   padding: 4px 14px;
+   border: 2px solid grey;
+   border-radius: 10px;
+   font-size: 18px;
+   font-family: 'Baloo Bhai 2', cursive;
+   cursor:pointer;
+}
+.btn:hover{
+   background-color: rgb(68, 65, 65);
+}
+.container{
+border: 3px solid white;
+margin: 27px 2px;
+padding: 38px 2px;
+width: 37%;
+border-radius: 16px;
+position: absolute;
+right: 1px;
+}
+.form-group input  {
+text-align: center;
+display: flex;
+width: 396px;
+padding: 4px;
+border: 2px solid black;
+margin: 8px auto;
+border-radius: 10px;
+font-size: 20px;
+font-family: 'Baloo Bhai 2', cursive;
+font-weight: bold;
+}
+.form-group select  {
+    text-align: center;
+    display: flex;
+    width: 410px;
+    padding: 4px;
+    border: 2px solid black;
+    margin: 8px auto;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: bold;
+}
+.container h1{
+   text-align: center;
+   font-weight: bolder;
+}
+select {
+    text-align-last: center;
+    text-align: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
+ }
+.container button{
+margin: 16px auto;
+display: flex;
+width: 407px;
+padding: 6px 171px;
+font-weight: bold;
+font-size: 22px;
+}

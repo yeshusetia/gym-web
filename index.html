@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+    <title>YS Fitness </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+
+<body>
+    <header class="header">
+        <!-- Left box for logo -->
+        <div class="left">
+            <img src="dumb.png">
+            <div class="name">Yeshu Fitness</div>
+        </div>
+        <!-- mid box for navigation bar -->
+        <div class="mid"> <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact US</a></li>
+        </ul></div>
+
+
+        <!-- Right box for buttons -->
+        <div class="right">
+            <button class="btn" onclick="callus()" >Call Us Now</button>
+        <button class="btn">Email Us</button></div>
+    </header>
+    <div class="container">
+       <h1>
+           Join The Best Gym Now
+       </h1>
+       <!-- Form Start from here -->
+       <!-- if form gets true from validate function then only it will run -->
+       <form onsubmit="return validate()" > 
+           <div class="form-group">
+               <input   type="text" id="name" class="text" placeholder="Enter your Name">
+           </div>
+           <div class="form-group">
+            <input   type="text" class="text" id="age" placeholder="Enter your Age">
+        </div>
+        <div class="form-group">
+            <select class="selection" id="select" >
+            <option class="op" id="op1"  value="-1"  class="text" >Choose Gender</option >
+            <option class="op" id="op2"  value="Male" class="text" >Male</option >
+            <option class="op" id="op3"  value="Female" class="text" >Female</option >
+            <option class="op" id="op4"  value="Transgender" class="text" >Transgender</option>
+        </select>
+        </div>
+
+        <div class="form-group">
+            <input   type="text" class="text" id="place" placeholder="Enter your Locality">
+        </div>
+        <div class="form-group">
+            <input  type="text" class="text" id="phone" placeholder="Enter your Phone No.">
+        </div>
+        <button class="btn" type="submit" onclick="validate()">Submit</button>
+       </form>
+    </div>
+</body>
+<script type="text/javascript">
+function callus()
+{
+alert("Call on this 0181-5321465 for more Information");
+}
+    function validate()
+    {
+        
+        var name=document.getElementById("name");
+        var age= document.getElementById("age");
+        var place=document.getElementById("place");
+        var phone=document.getElementById("phone");
+        var select=document.getElementById("select").selectedIndex;
+        var regx = /[7-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/;
+     if(name.value.trim()=="" || age.value.trim()=="" || place.value.trim()=="" || phone.value.trim()==""||select==0)
+     {
+         alert("All Fields Should be Filled");
+         return false;
+     }
+    else if(age.value<16)
+    {
+alert("Your age is less than 16");
+age.style.border="4px solid red";
+return false;
+    }
+    else if(age.value>80)
+    {
+alert("Enter Correct age");
+age.style.border="4px solid red";
+return false;
+    }
+    else if(phone.value.length!=10)
+    {
+  alert("Enter 10 Digit Correct Mobile Number");
+  phone.style.border="4px solid red";
+  return false;
+    }
+    else if(regx.test(phone.value)==false)
+    {
+alert("Enter Correct Mobile Number Alphabets are not allowded in Phone Number");
+phone.style.border="4px solid red";
+return false;
+    }
+    else{
+        alert("Thanks " +name.value+" Your Form is Successfully Submitted");
+        return true;
+    }
+}
+    </script>
+</html>
